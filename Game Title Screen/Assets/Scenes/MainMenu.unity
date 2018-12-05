@@ -1213,6 +1213,7 @@ GameObject:
   - component: {fileID: 1049121690}
   - component: {fileID: 1049121689}
   - component: {fileID: 1049121688}
+  - component: {fileID: 1049121691}
   m_Layer: 5
   m_Name: HelpPanel
   m_TagString: Untagged
@@ -1296,6 +1297,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1049121686}
+--- !u!114 &1049121691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1049121686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5418168ead6374f9ef406091c88763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 298871397}
+  selectedObject: {fileID: 1172659208}
 --- !u!1 &1070046545
 GameObject:
   m_ObjectHideFlags: 0
@@ -2030,6 +2044,7 @@ GameObject:
   - component: {fileID: 1524636061}
   - component: {fileID: 1524636063}
   - component: {fileID: 1524636064}
+  - component: {fileID: 1524636065}
   m_Layer: 5
   m_Name: MainMenuPanel
   m_TagString: Untagged
@@ -2125,6 +2140,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0add78e0093dba940a188afcf6b2955d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1524636065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1524636059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5418168ead6374f9ef406091c88763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 298871397}
+  selectedObject: {fileID: 578028533}
 --- !u!1001 &1565739882
 Prefab:
   m_ObjectHideFlags: 0
@@ -2234,8 +2262,9 @@ GameObject:
   - component: {fileID: 1648535710}
   - component: {fileID: 1648535709}
   - component: {fileID: 1648535708}
+  - component: {fileID: 1648535711}
   m_Layer: 5
-  m_Name: StartButton (3)
+  m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2298,7 +2327,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1648535709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1648535711}
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1648535709
@@ -2334,6 +2374,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1648535706}
+--- !u!114 &1648535711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1648535706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b482e42e954bd14c9712933e48ad5e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1676749777
 GameObject:
   m_ObjectHideFlags: 0
@@ -2401,7 +2452,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: Quit
 --- !u!222 &1676749780
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2419,6 +2470,7 @@ GameObject:
   - component: {fileID: 1785554065}
   - component: {fileID: 1785554064}
   - component: {fileID: 1785554063}
+  - component: {fileID: 1785554066}
   m_Layer: 5
   m_Name: AudioPanel
   m_TagString: Untagged
@@ -2507,6 +2559,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1785554061}
+--- !u!114 &1785554066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1785554061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5418168ead6374f9ef406091c88763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 298871397}
+  selectedObject: {fileID: 1999293973}
+--- !u!1 &1999293973 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100008, guid: b6a1cf4e3eeaf9a4ca38bf8acb910a6d, type: 2}
+  m_PrefabInternal: {fileID: 662226320}
 --- !u!224 &1999293974 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22400008, guid: b6a1cf4e3eeaf9a4ca38bf8acb910a6d,
